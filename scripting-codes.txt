@@ -1,0 +1,14 @@
+#Sanal Asistan için yazdığımız scripting dilinin örnekleri
+
+Google bilgi alma:
+
+```var embed = post('https://api.gleox.web.tr/google/infotag.php?value=$_GET[value]');
+equals('$embed[success]', 'true', "tts('$embed[name] bir $embed[type]. Google ise şu şekilde özetlemekte: $embed[description] ')");
+equals('$embed[success]', 'false', "tts('bilgi bulamadım')");```
+
+Hava durumu:
+
+```var dailyWeather = postWithAuth('https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=istanbul', 'apikey 7n4T48rYyNBy1K0lMyP3W9:75qxfgG90nSgX0AU9AMXid');
+tts('Bugün hava $dailyWeather[result][0][description] görünüyor.');```
+
+
