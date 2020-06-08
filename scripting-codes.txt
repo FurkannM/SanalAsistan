@@ -8,7 +8,7 @@ equals('$embed[success]', 'false', "tts('bilgi bulamadım')");```
 
 Hava durumu:
 
-```var dailyWeather = postWithAuth('https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=istanbul', 'apikey 7n4T48rYyNBy1K0lMyP3W9:75qxfgG90nSgX0AU9AMXid');
+```var dailyWeather = postWithAuth('https://api.collectapi.com/weather/getWeather?data.lang=tr&data.city=istanbul', 'apikey asd');
 tts('Bugün hava $dailyWeather[result][0][description] görünüyor.');```
 
 
